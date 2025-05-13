@@ -1,0 +1,98 @@
+h1 {
+    font: var(--text-headingMD);
+    color: var(--text-heading);
+}
+
+label {
+    font: var(--text-bodySM);
+    color: var(--text-body);
+}
+
+input {
+    height: 3rem;
+    background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    border-radius: 0.5rem;
+
+    &[required] + .error {
+
+        display: flex;
+
+        height: 1rem;
+        align-items: center;
+        gap: 0.5rem;
+        padding-left: 0.03rem;
+        
+    }
+
+    &:invalid:focus {
+        outline: 1px solid var(--danger);
+        height: 3rem;
+    }
+
+    &:invalid:focus:placeholder-shown {
+        outline: 1px solid var(--brand-light);
+        height: 3rem;
+    }
+
+    &:invalid:not(:focus):placeholder-shown + .error {
+        display: none;
+    }
+    
+    &:valid:focus + .error {
+        display: none;
+    }
+
+    /* &:invalid:not(:focus) + .error {
+        display: none;
+    } */
+
+    /* Para quando estiver sem foco e válido - não deve aparecer msg de erro */
+    &:valid:not(:focus) + .error {
+        display: none;
+    }
+
+    &:invalid:focus:placeholder-shown + .error {
+        display: none;
+    }
+}
+
+.input-wrapper > .error {
+    margin-top: -.25rem;
+}
+
+input, textarea {
+    padding-left: 1rem;
+}
+
+textarea {
+    padding-top: 1rem;
+}
+
+input::placeholder, 
+textarea::placeholder {
+    font: var(--text-bodyMD);
+    color: var(--input-placeholder);
+}
+
+.sec-wrapper svg {
+    color: var(--input-placeholder);
+}
+
+.error { 
+    & svg {
+        width: 1rem;
+        height: 1rem;
+
+        color: var(--danger);
+    }
+
+    & span {
+        font: 300 0.75rem/normal var(--font-family-open);
+        color: var(--danger);
+    }
+}
+
+.select-type label {
+    cursor: pointer;
+}
