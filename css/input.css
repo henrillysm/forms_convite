@@ -1,17 +1,16 @@
-textarea:focus {
-    height: 8.5rem;
-
+input[type="text"]:valid:focus {
+    
+    height: 3rem;
     background-color: var(--input-base);
     border-radius: 0.5rem;
     outline: 1px solid var(--brand-light);
     font: var(--text-bodyMD);
     color: var(--text-heading);
+
 }
 
-.textarea-wrapper textarea {
-    width: 100%;
-    height: 8.5rem;
-    
+input {
+    height: 3rem;
     background-color: var(--input-base);
     border: 1px solid var(--input-stroke);
     border-radius: 0.5rem;
@@ -29,14 +28,14 @@ textarea:focus {
 
     &:invalid:focus {
         outline: 1px solid var(--danger);
-        height: 8.5rem;
+        height: 3rem;
     }
 
-    /* &:invalid:focus:placeholder-shown {
+    &:invalid:focus:placeholder-shown {
         outline: 1px solid var(--brand-light);
-        height: 8.5rem;
-    } */
-    
+        height: 3rem;
+    }
+
     &:invalid:not(:focus):placeholder-shown + .error {
         display: none;
     }
@@ -44,14 +43,27 @@ textarea:focus {
     &:valid:focus + .error {
         display: none;
     }
-    
+
+    /* &:invalid:not(:focus) + .error {
+        display: none;
+    } */
+
+    /* Para quando estiver sem foco e válido - não deve aparecer msg de erro */
     &:valid:not(:focus) + .error {
         display: none;
     }
 
-    /* &:invalid:focus:placeholder-shown + .error {
+    &:invalid:focus:placeholder-shown + .error {
         display: none;
-    } */
+    }
 }
+
+.select-color:has(input:checked) img {
+    /* border: .375rem solid var(--shape-button); */
+    outline: 0.125rem solid var(--brand-light);
+    outline-offset: -0.125rem;
+    border-radius: 999px;
+}
+
 
 

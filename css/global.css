@@ -51,7 +51,8 @@
 }
 
 
-.select-type input, .select-color input {
+.select-type input, 
+.select-color input {
     display: none;
 }
 

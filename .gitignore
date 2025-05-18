@@ -1,0 +1,22 @@
+desktop.ini
+
+
+# Uma opção seria deixar o espaço do outline reservado usando color "transparent"
+
+
+# .select-color img {
+#   width: 100px;
+#   height: 100px;
+#   object-fit: cover;
+#   border: 0.375rem solid var(--shape-button); /* visível sempre */
+#   outline: 0.125rem solid transparent;        /* reservado espaço do outline */
+#   outline-offset: -0.125rem;                  /* colado à borda sem espaço extra */
+#   border-radius: 999px;
+#   box-sizing: border-box;
+#   transition: outline-color 0.2s ease-in-out;
+# }
+
+# .select-color:has(input:checked) img {
+#   outline-color: var(--brand-light); /* só muda a cor */
+# }
+
