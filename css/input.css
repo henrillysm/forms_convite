@@ -1,4 +1,4 @@
-input[type="text"]:valid:focus {
+input[type="text"]:valid:focus, input[type="email"]:valid:focus {
     
     height: 3rem;
     background-color: var(--input-base);
@@ -65,5 +65,47 @@ input {
     border-radius: 999px;
 }
 
+.select-events:has(input:checked) {
+    outline-color: var(--brand-light);
+    background-color: var(--shape-button);
+
+}
+
+#estilo-escuro:checked ~ .mode-light {
+    display: none;
+}
+
+#estilo-claro:checked ~ .mode-black {
+    display: none;  
+}
+
+.switch-mode:has(#estilo-escuro:checked) .mode-black img {
+    outline: 2px solid var(--input-stroke);
+    border-radius: 999px;
+}
+
+.switch-mode:has(#estilo-claro:checked) .mode-light img {
+    outline: 2px solid var(--accent-yellow);
+    border-radius: 999px;
+}
+
+
+
+.file input:valid ~ .error {
+    display: none;
+}
+
+.file input:invalid ~ .file-upload > span:nth-of-type(2) {
+    display: none;
+}
+
+.file input:valid ~ .file-upload > span:nth-of-type(1){
+    display: none;
+}
+
+.file-upload span:nth-of-type(2) {
+    font: var(--text-bodyMD);
+    color: var(--text-body);
+}
 
 

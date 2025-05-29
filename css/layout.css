@@ -1,24 +1,40 @@
 #app {
-    display: grid;
-    grid-template-columns: 32.78% 67.21%;
-    height: 100vh;
+    /* Tamanho total do layout 1240px */
 
-    /* overflow: hidden; */
+    display: grid;
+    grid-template-columns: 32.25% 67.74%;
+    
+    max-width: 77.5rem;
+    height: 100vh;
+    overflow: hidden;
     gap: 1.25rem;
+    margin: 1.25rem;
+    /* outline: 1px solid red; */
 }
 
+body {
+    background-color: var(--shape-bg);
+    overflow: hidden;
+}
+
+main {
+    overflow: auto;
+    scrollbar-width: none;   
+}
 
 aside {
-
+    background: url(/assets/Background.svg) no-repeat center/cover;
+    
+    
     display: flex;
     justify-content: center;
     max-width: 25rem;
-    height: 45.5rem;
-    background: url(/assets/Background.svg) no-repeat center/cover;
-    border-radius: 1.25rem;
-    outline: 1.25rem solid var(--shape-bg);
+    max-height: 45.5rem;
+    border-radius: 1.25rem ;
+    /* max-width: 100%; */
+    /* height: 100%; */
+    
 }
-
 
 .aside-container {
     position: relative;
@@ -26,8 +42,6 @@ aside {
     width: 21rem;
     height: 9rem;
     margin-top: 2rem;
-
-    /* border: 1px solid red; */
 
     & img {
         width: 2.86rem;
@@ -37,7 +51,6 @@ aside {
         
     }
     
-
     & header {
         position: absolute;
         margin-top: 4rem;
@@ -68,10 +81,11 @@ aside {
     gap: 2.5rem;
 
     background-color: var(--shape-body);
-    width: 51.25rem;
-    height: 123.8rem;
-    outline: 1.25rem solid var(--shape-bg);
+    max-width: 51.25rem;
+    max-height: 123.8rem;
     border-radius: 1.25rem;
+    /* max-width: 100%; */
+    /* height: 100%; */
 
     & h1 {
         width: 35rem;
@@ -150,9 +164,9 @@ form {
     height: 2.5rem;
 
     display: flex;
-    gap: .75rem;
-    /* outline: 1px solid red; */
+    justify-content: space-between;
 
+    /* outline: 1px solid red; */
 }
 
 .colors img {
@@ -241,29 +255,155 @@ form {
 
 }
 
-/* input[type="text"]:not(:placeholder-shown)  */
+.events {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    height: 20.312rem;
+}
 
+.select-events {
 
-/* input[type="text"]:valid:focus {
-    
-    height: 3rem;
-    background-color: var(--input-base);
-    border-radius: 0.5rem;
-    outline: 1px solid var(--brand-light);
-    font: var(--text-bodyMD);
-    color: var(--text-heading);
-
-} */
-
-/* .textarea-wrapper textarea {
-    width: 100%;
-    height: 8.5rem;
-    
-    background-color: var(--input-base);
+    display: flex;
+    justify-content: center;
+    padding: 3px 3px 0 3px;
+    background-color: var(--shape-button);
     border: 1px solid var(--input-stroke);
-    border-radius: 0.5rem;
-} */
 
+    outline: 2px solid transparent;
+    outline-offset: -2px ;
+
+    border-radius: .5rem;
+
+    /* width: 8.375rem; */
+    /* height: 6.437rem; */
+
+    & img {
+        border-radius: .25rem;
+        height: 4rem;
+    }
+
+    &:hover {
+        background-color: var(--shape-hover);
+        /* cursor: pointer; */
+    }
+
+}
+
+.events-wrapper {
+    /* outline: 1px solid blue; */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .5rem;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+
+.events-text {
+    font: var(--text-bodySM);
+    color: var(--text-heading);
+}
+
+.switch-mode {
+    width: 11rem;
+    height: 4.937rem;
+}
+
+.switch-mode-style {
+    display: flex;
+    gap: .75rem;
+    align-items: center;
+    height: 3rem;
+    
+
+    & img {
+        width: 4rem;
+        height: 2rem;
+    }
+
+    & span {
+        padding-block: 0.906rem;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.file {
+
+    width: 23rem;
+    height: 4.937rem;
+
+    & > .error {
+        display: flex;
+
+        height: 1rem;
+        align-items: center;
+        gap: 0.5rem;
+        padding-left: 0.03rem;
+    }
+}
+
+.file-upload {
+    display: flex;
+    height: 3rem;
+    gap: .75rem;
+    align-items: center;
+
+    & span {
+        font: var(--text-bodyMD);
+        color: var(--input-placeholder);
+    }
+}
+
+
+
+.button-file {
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+    align-items: center;
+    width: 7.437rem;
+    height: 2.5rem;
+    background-color: var(--shape-button);
+    border-radius: .5rem;
+
+    & svg {
+        color: var(--brand-light);
+        width: 1rem;
+        height: 1rem;
+    }
+
+    & span {
+        font: var(--text-bodySM);
+        color: var(--text-heading);
+    }
+
+    &:hover {
+        background-color: var(--shape-hover);
+        cursor: pointer;
+    }
+}
+
+footer {
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 2.5rem;
+    gap: 3rem;
+    height: 14.25rem;
+
+}
+
+.action-wrapper {
+    display: flex;
+    justify-content: end;
+}
 
 
 

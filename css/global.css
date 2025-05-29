@@ -46,15 +46,14 @@
     --text-bodyXS: 400 .75rem/normal var(--font-family-open);
 }
 
-.aside-container {
-    background-color: var(--shape-body);
-}
-
-
-.select-type input, 
-.select-color input {
+/* .select-type input,  */
+.select-color input,
+.select-events input,
+.file input {
     display: none;
 }
+
+
 
 input[type="date"] {
     
@@ -63,3 +62,15 @@ input[type="date"] {
     }
 }
 
+.select-type {
+    position: relative;
+
+    & [type="radio"] {
+    all: unset;
+    inset: 0;
+    position: absolute;
+}
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,31 @@
+button {
+    all: unset;
+    width: 11.062rem;
+    height: 3rem;
+    background-color: var(--brand-dark);
+    border-radius: 0.5rem;
+    color: var(--text-heading);
+    font: var(--text-bodyMD);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+
+    box-shadow: 0 1px var(--brand-dark);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
+    & svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    &:hover, &:focus {
+        background-color: var(--brand-mid);
+        cursor: pointer;
+    }
+    &:active {
+        transform: translateY(2px);
+        box-shadow: 0 0 var(--brand-dark);
+    }
+}
